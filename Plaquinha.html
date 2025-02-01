@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="Plaquinha.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaquinha do Anúncio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="plaquinha">
+        <div class="icone-casa"></div> <!-- Aqui está a casinha -->
+        <h1>Anúncio de Imóvel</h1>
+        <div class="informacoes">
+            <p><strong>Tipo de Imóvel:</strong> <span id="tipo_imovel"></span></p>
+            <p><strong>Nome do Anunciante:</strong> <span id="nome"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+        </div>
+        <!-- Imagem agora vai ser carregada da pasta local -->
+        <img src="house.png" alt="Casa" />
+    </div>
+
+    <script>
+        // Pegando os dados do localStorage
+        var tipo_imovel = localStorage.getItem('tipo_imovel');
+        var nome = localStorage.getItem('nome');
+        var email = localStorage.getItem('email');
+        var telefone = localStorage.getItem('telefone');
+
+        // Exibindo os dados na página
+        document.getElementById('tipo_imovel').textContent = tipo_imovel;
+        document.getElementById('nome').textContent = nome;
+        document.getElementById('email').textContent = email;
+        document.getElementById('telefone').textContent = telefone;
+    </script>
+</body>
+</html>

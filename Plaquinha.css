@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.plaquinha {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.plaquinha h1 {
+    color: #3b3fb1;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.informacoes p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.icone-casa {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    margin: 0 auto 20px;
+}
+
+.icone-casa:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 15px solid #f0f0f0;
+}
+
+.icone-casa:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 26px;
+    height: 26px;
+    background-color: #4caf50;
+    border-radius: 50%;
+}
+
+/* Estilo para a imagem */
+img {
+    width: 50px; /* Tamanho pequeno da imagem */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
