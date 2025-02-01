@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="cadastro.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Anúncio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário de Anúncio de Imóvel</h1>
+    <form id="formulario" onsubmit="salvarDados(event)">
+        <label for="tipo_imovel">Tipo de Imóvel:</label>
+        <select id="tipo_imovel" name="tipo_imovel" required>
+            <option value="venda">Venda</option>
+            <option value="aluguel">Aluguel</option>
+        </select>
+        <br><br>
+
+        <label for="nome">Nome do Anunciante:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function salvarDados(event) {
+            event.preventDefault(); // Evita o envio tradicional do formulário
+
+            // Coletando os dados do formulário
+            var tipo_imovel = document.getElementById('tipo_imovel').value;
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var telefone = document.getElementById('telefone').value;
+
+            // Salvando os dados no localStorage
+            localStorage.setItem('tipo_imovel', tipo_imovel);
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('email', email);
+            localStorage.setItem('telefone', telefone);
+
+            // Redirecionando para a página de plaquinha
+            window.location.href = "plaquinha.html";
+        }
+    </script>
+</body>
+</html>
